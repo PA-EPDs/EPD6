@@ -22,6 +22,7 @@ function generarCodigoActividad(string $nombre, int $longitud): string
     }
     $prefijo = strtoupper(substr($nombreLimpio, 0, LONGITUD_PREFIJO));
 
+    // Caracteres que faltan para completar la longitud (el prefijo puede ser < 3).
     $longitudSufijo = $longitud - strlen($prefijo);
 
     do {
@@ -49,7 +50,6 @@ $pruebas = [
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
     <title>EPD 6 - Ej2: Códigos de actividad</title>
 </head>
 <body>
